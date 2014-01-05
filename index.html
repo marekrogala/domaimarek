@@ -65,7 +65,7 @@
 									<li><a href="#" class="home">Witamy!</a></li>
 			              			<li><a href="#" class="slub">Ślub</a></li>
 									<li><a href="#" class="wesele">Wesele</a></li>
-									<li><a href="#" class="dojazd">Dojazd</a></li>
+									<li><a href="#" class="contact">Dojazd</a></li>
 									<li><a href="#" class="info">Informacje praktyczne</a></li>
 									<li><a href="#" class="dzieki">Podziękowania</a></li>
 									<li><a href="#" class="kontakt">Kontakt</a></li>
@@ -395,7 +395,7 @@
 
 	<!-- start: 4th Page - Dojazd -->
 	<div id="mapBg"></div>
-	<div id="dojazd" class="color blue transparent">
+	<div id="contact" class="color blue transparent">
 		
 		<!--start: Container -->
 		<div class="container">
@@ -416,27 +416,7 @@
 
 			</div>
 			<!-- end: Page Title -->
-			
-			<!-- start: Row -->
-			<div class="row-fluid">		
-				
-				<div class="span12">
-					
-					<!-- start: Contact Info -->
-					<b>creativeLabs</b> •
-					30 South Park Avenue •
-					San Francisco, CA 94108, USA •
-					Phone: (123) 456-7890 •
-					Fax: +08 (123) 456-7890 •
-					Email: contact@companyname.com •
-					Web: companyname.com	
-					<!-- end: Contact Info -->
-				
-				</div>	
-			
-			</div>
-			<!-- end: Row -->
-			
+						
 			<hr class="clean">
 			
 			<!-- start: Row -->
@@ -445,35 +425,31 @@
 				<!-- start: Map -->
 				<div class="span6">
 					
-					<!-- start: Contact Form -->
-					<div id="contact-form">
-
-						<form method="post" action="">
-							
-							<fieldset>
-								
-								<input tabindex="4" id="name" name="name" type="text" value="" class="span12" placeholder="Name: ..." >
-								<input tabindex="2" id="email" name="email" type="text" value="" class="span12" placeholder="Email: ...">
-								<input tabindex="3" id="www" name="www" type="text" value="" class="span12" placeholder="WWW: ...">
-								<textarea tabindex="3" class="input-xlarge span12" id="message" name="body" rows="7" placeholder="Message: ..."></textarea>
-
-								<div class="actions">
-									<button tabindex="3" type="submit" class="btn btn-succes btn-large">Send message</button>
-								</div>
-								
-							</fieldset>
-
-						</form>
-
+				<div>
+					<h3>Ślub</h3>
+					<b>Kościół Ojców Cystersów</b><br/>
+					pw. Najświętszej Maryi Panny Królowej Korony Polskiej<br/>
+					ul. Polanki 131 (dojazd od ul. Leśnej lub od ul. Polanki)
+					<!-- end: Contact Info -->
+				</div>	
+					<div id="googlemaps1">
+						<div id="map1" class="google-map google-map-full"></div>
 					</div>
-					<!-- end: Contact Form -->
 					
 
 				</div>
 				<!-- end: Map -->
 				
 				<div class="span6">
-					
+
+				<div>
+					<h3>Wesele</h3>
+					<b>Dwór Kaszubski Magnat</b><br/>
+                    Dwór Kaszubski<br/>
+                    Bojano, ul. Wybickiego 52<br/>
+                    84-207 Koleczkowo
+				</div>						
+
 					<!-- starts: Google Maps -->
 					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 					<div id="googlemaps">
@@ -482,6 +458,30 @@
 					<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 					<script src="js/jquery.gmap.min.js"></script>
 					<script type="text/javascript">
+						$('#map1').gMap({
+							controls: {
+								panControl: false,
+								zoomControl: true,
+								mapTypeControl: true,
+								scaleControl: false,
+								streetViewControl: false,
+								overviewMapControl: false
+							},
+							maptype: 'ROADMAP',
+							scrollwheel: true,
+							zoom: 16,
+							markers: [
+								{
+                                    latitude: 54.40709069234642,
+                                    longitude: 18.556983768939972,
+									html: '',
+									popup: false,
+								}
+
+							],
+
+						});
+
 						$('#map').gMap({
 							controls: {
 								panControl: false,
@@ -496,7 +496,7 @@
 							zoom: 13,
 							markers: [
 								{
-									address: 'San Francisco, United States', // Your Adress Here
+									address: 'ul. Wybickiego 52, Bojano, Poland', // Your Adress Here
 									html: '',
 									popup: false,
 								}
@@ -519,7 +519,8 @@
 							zoom: 13,
 							markers: [
 								{
-									address: 'San Francisco, United States', // Your Adress Here
+                                    latitude: 54.40709069234642,
+                                    longitude: 18.556983768939972,
 									html: '',
 									popup: false,
 								}
