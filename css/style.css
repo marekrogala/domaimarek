@@ -1601,6 +1601,8 @@ a.buy:hover {
 	position: relative;
 	z-index: 2;
 }
+.gmnoprint img { max-width: none; }
+
 
 #googlemaps {
 	position: relative;
