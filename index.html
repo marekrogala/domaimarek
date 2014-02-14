@@ -4,7 +4,7 @@
 
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Essentia Responsive Bootstrap Theme by Bootstrap Master</title> 
+	<title>Ślub Dominiki i Marka - 7 czerwca 2014!</title> 
 	<meta name="description" content="Essentia Responsive Bootstrap Theme by Bootstrap Master"/>
 	<meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap" />
 	<meta name="author" content="Łukasz Holeczek from creativeLabs"/>
@@ -33,6 +33,7 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:700,400">
 	<!-- end: CSS -->
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -65,9 +66,8 @@
 									<li><a href="#" class="home">Witamy!</a></li>
 			              			<li><a href="#" class="slub">Ślub</a></li>
 									<li><a href="#" class="wesele">Wesele</a></li>
-									<li><a href="#" class="contact">Dojazd</a></li>
 									<li><a href="#" class="info">Informacje praktyczne</a></li>
-									<li><a href="#" class="dzieki">Podziękowania</a></li>
+									<li><a href="#" class="contact">Dojazd</a></li>
 									<li><a href="#" class="kontakt">Kontakt</a></li>
 			            		</ul>
 			          		</div>
@@ -97,43 +97,25 @@
 
 					<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
 						<div class="sl-slide-inner">
-							<div class="deco" data-icon="H"></div>
-							<h2>A bene placito</h2>
-							<blockquote><p>You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.</p><cite>Ralph Waldo Emerson</cite></blockquote>
+							<div id="t1" class="niceBig">Dominika i Marek</div>
+							<div id="t2" class="niceBig">Bierzemy ślub!</div>
 						</div>
 					</div>
 
 					<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
 						<div class="sl-slide-inner">
-							<div class="deco" data-icon="q"></div>
-							<h2>Regula aurea</h2>
-							<blockquote><p>Until he extends the circle of his compassion to all living things, man will not himself find peace.</p><cite>Albert Schweitzer</cite></blockquote>
+							<div id="t3" class="niceBig">7 czerwca 2014</div>
+							<div id="t4" class="niceBig"></div>
 						</div>
 					</div>
 
 					<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
 						<div class="sl-slide-inner">
-							<div class="deco" data-icon="O"></div>
-							<h2>Dum spiro, spero</h2>
-							<blockquote><p>Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.</p><cite>Dame Jane Morris Goodall</cite></blockquote>
+							<div id="t5" class="niceBig">Z wielką radością zapraszamy!</div>
 						</div>
+					</div>
 					</div>
 
-					<div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
-						<div class="sl-slide-inner">
-							<div class="deco" data-icon="I"></div>
-							<h2>Donna nobis pacem</h2>
-							<blockquote><p>The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.</p><cite>Michael Klaper M.D.</cite></blockquote>
-						</div>
-					</div>
-
-					<div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
-						<div class="sl-slide-inner">
-							<div class="deco" data-icon="t"></div>
-							<h2>Acta Non Verba</h2>
-							<blockquote><p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p><cite>Margi Clarke</cite></blockquote>
-						</div>
-					</div>
 				</div><!-- /sl-slider -->
 
 				<nav id="nav-arrows" class="nav-arrows">
@@ -145,8 +127,6 @@
 					<span class="nav-dot-current"></span>
 					<span></span>
 					<span></span>
-					<span></span>
-					<span></span>
 				</nav>
 
 			</div><!-- /slider-wrapper -->
@@ -154,10 +134,29 @@
 	    </div>
 
 	</div>
+<script>
+function countDown(y, m, d) {
+	var today = new Date()
+	var future = new Date(y, m - 1, d + 1)
+	seconds = Math.floor((future - today) / 1000)
+	if (seconds == 0)
+		return 'to dziś!'
+    if (seconds < 0) 
+        return 'już jesteśmy małżeństwem!'
+	days = Math.floor(seconds / (24*60*60))
+ 
+	return 'to już za <b>' + days + '</b> dni!'
+}
+
+
+setInterval(function() {
+	$('#t4').html(countDown(2014, 6, 7)) }, 100);
+
+</script>
 	<!-- end: 1st Page - Home -->
 	
 	<!-- start: 2nd Page - Slub -->
-	<div id="slub" class="color black">
+	<div id="slub" class="color white">
 		
 		<!--start: Container -->
 		<div class="container">
@@ -183,7 +182,8 @@
         		<div class="span12">
 	
 					<p>
-						Zapraszamy serdecznie rodzinę i wszystkich przyjaciół na ślub, który odbędzie się o 15.30 w kościele o.o. Cystersów w Gdańsku - Oliwie (parafia Najświętszej Maryi Panny Królowej Korony Polskiej).
+Zapraszamy serdecznie rodzinę i wszystkich przyjaciół na nasz ślub, który odbędzie się
+ <b>7. czerwca 2014</b> roku o godzinie <b>15.30</b> w kościele o.o. Cystersów pw. Matki Bożej Królowej Korony Polskiej w Gdańsku - Oliwie.
 					</p>	
           			
         		</div>
@@ -204,7 +204,7 @@
 	<!-- end: 2nd Page - Slub -->
 	
 	<!-- start: 3rd Page - Wesele -->
-	<div id="wesele" class="color white">
+	<div id="wesele" class="color green transparent">
 		
 		<!--start: Container -->
 		<div class="container">
@@ -229,10 +229,10 @@
 	
         		<div class="span12">
 	
-					<p>
-Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie przybycia do dnia 15 kwietnia 2014. Miejsce: Dwór Kaszubski <emph>Magnat</emph> w Bojanie.
-					</p>	
-          			
+					<p>Przyjęcie weselne odbędzie się w <emph>Dworze Kaszubskim Magnat</emph> przy ul. Wybickiego 52 w Bojanie.</p>
+                    <p>Wszystkich gości weselnych prosimy o potwierdzenie przybycia do <b>4. maja 2014 r.</b></p>
+                    <p>Przy sali weselnej znajduje się obszerny parking przeznaczony dla gości.</p>
+                    <p>Gości, którzy pragną skorzystać z organizowanego przez nas transportu między kościołem a salą, prosimy o kontakt z Młodymi lub Rodzicami.</p>
         		</div>
 			
 			</div>
@@ -250,6 +250,53 @@ Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie pr
 	</div>
 	<!-- end: 3rd Page - Wesele -->
 	
+
+
+	<!-- start: 4th Page - Portfolio -->
+	<div id="info" class="color white">
+		
+		<!--start: Container -->
+		<div class="container">
+
+			<!--start: Wrapper -->
+			<div class="wrapper span12">
+	
+							<!-- start: Page Title -->
+			<div id="page-title">
+
+				<div id="page-title-inner">
+
+					<h2><span>Informacje praktyczne</span></h2>
+
+				</div>	
+
+			</div>
+
+            <div class="row-fluid">
+	
+        		<div class="span12">
+	
+<p>Ponieważ liczba miejsc parkingowych przed kościołem jest ograniczona, polecamy pozostawienie samochodów na parkingu przy ul. Polanki na wysokości V LO (ul. Polanki 130), około 50 m od kościoła.</p>	
+<p>Gości, którzy pragną skorzystać z organizowanego przez nas transportu między kościołem a salą, prosimy o kontakt z Młodymi lub Rodzicami.</p>	
+<p>Dużą przyjemność sprawi nam książka z dedykacją w miejsce kwiatów.</p>	
+<p>Ekspertami do spraw prezentów ślubnych są nasze siostry - Weronika i Zosia.</p>
+          			
+        		</div>
+			
+			</div>
+			<!-- end: Page Title -->
+			
+
+			</div>
+			<!-- end: Wrapper -->
+		
+		</div>
+		<!--end: Container -->
+		
+	</div>
+	<!-- end: 4th Page - Portfolio -->
+
+
 
 	<!-- start: 4th Page - Dojazd -->
 	<div id="mapBg"></div>
@@ -287,9 +334,8 @@ Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie pr
 					<h3>Ślub</h3>
 					<b>Kościół Ojców Cystersów</b><br/>
 					pw. Najświętszej Maryi Panny Królowej Korony Polskiej<br/>
-					ul. Polanki 131 (dojazd od ul. Leśnej lub od ul. Polanki)<br/>
+					ul. Polanki 131 (samochód można zostawić od strony ul. Leśnej lub od strony ul. Polanki, przy V LO)<br/>
                     Gdańsk<br/><br/><br/>
-					<!-- end: Contact Info -->
 				</div>	
 					
 
@@ -423,108 +469,7 @@ Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie pr
 		
 	</div>
 	<!-- end: 4th Page - Dojazd -->
-
-
-	<!-- start: 4th Page - Portfolio -->
-	<div id="info" class="color white">
-		
-		<!--start: Container -->
-		<div class="container">
-
-			<!--start: Wrapper -->
-			<div class="wrapper span12">
 	
-							<!-- start: Page Title -->
-			<div id="page-title">
-
-				<div id="page-title-inner">
-
-					<h2><span>Informacje praktyczne</span></h2>
-
-				</div>	
-
-			</div>
-
-            <div class="row-fluid">
-	
-        		<div class="span12">
-	
-					<p>Nasze siostry Weronika i Zosi służą pomocą w sprawie prezentów ślubnych.</p>	
-          			
-        		</div>
-			
-			</div>
-			<!-- end: Page Title -->
-			
-			<!-- start: Flexslider --><!--
-			<div class="slider">
-				<div id="flex1" class="flexslider">
-					<ul class="slides">
-
-						<li><div class="picture"><img src="img/slider/slider1.jpg" alt="" /></div></li>
-
-						<li><div class="picture"><img src="img/slider/slider2.jpg" alt="" /></div></li>
-
-						<li><div class="picture"><img src="img/slider/slider3.jpg" alt="" /></div></li>
-
-					</ul>
-				</div>
-			</div>-->
-			<!-- end: Flexslider -->
-
-			</div>
-			<!-- end: Wrapper -->
-		
-		</div>
-		<!--end: Container -->
-		
-	</div>
-	<!-- end: 4th Page - Portfolio -->
-	
-	<!-- start: 5th Page - Podziekowania -->
-	<div id="dzieki" class="color yellow">
-		
-		<!--start: Container -->
-		<div class="container">
-
-			<!--start: Wrapper -->
-			<div class="wrapper span12">
-
-							<!-- start: Page Title -->
-			<div id="page-title">
-
-				<div id="page-title-inner">
-
-						<h2><span>Podziękowania</span></h2>
-
-				</div>	
-
-			</div>
-			<!-- end: Page Title -->				
-		
-			<!--start: Row -->
-	    	<div class="row-fluid">
-		
-				<div class="span12">
-					
-					<!-- start: About Us -->
-					<div id="story">
-						<p>Serdecznie dziękujemy wszystkim, którzy nas wspierają - bez was to wszystko byłoby niemożliwe!</p>
-					</div>	
-					<!-- end: About Us -->
-
-				</div>
-				
-			</div>
-			<!--end: Row -->
-			</div>
-			<!-- end: Wrapper -->
-		
-		</div>
-		<!--end: Container -->
-		
-	</div>
-	<!-- end: 5th Page - About -->
 	
 	<!-- start: 6th Page - Team -->
 	<div id="kontakt" class="color white">
@@ -569,8 +514,8 @@ Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie pr
 						<img class="img-circle" src="img/team_member.jpg" alt="team member">
 					</div>	
 					<div class="team-name">Weronika</div>
-					<div class="position">Świadek &amp; siostra</div>
-                    <a href="mailto:">wera.sawicka@gmail.com</a>
+					<div class="position">Świadek</div>
+					<div class="member-info"><a href="mailto:">wera.sawicka@gmail.com</a></div>
 				</div>
 				<!-- end: About Member -->
 				
@@ -583,9 +528,9 @@ Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie pr
 					</div>	
 					<div class="team-name">Dominika</div>
 					<div class="position">Panna Młoda</div>
-					<p>
-                    <a href="mailto:domsawicka@gmail.com">domsawicka@gmail.com</a>
-					</p>
+					<div class="member-info">
+                    <a href="mailto:domsawicka@gmail.com">dom.sawicka@gmail.com</a>
+					</div>
 				</div>
 				<!-- end: About Member -->
 				
@@ -598,9 +543,9 @@ Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie pr
 					</div>	
 					<div class="team-name">Marek</div>
 					<div class="position">Pan Młody</div>
-					<p>
-                    <a href="mailto:marrogala@gmail.com">marrogala@gmail.com</a>
-					</p>
+					<div class="member-info">
+                    <a href="mailto:marrogala@gmail.com">mar.rogala@gmail.com</a>
+					</div>
 				</div>
 				<!-- end: About Member -->
 				
@@ -611,11 +556,11 @@ Po ślubie odbędzie się wesele. Prosimy zaproszonych gości o potwierdzenie pr
 					<div class="avatar">
 						<img class="img-circle" src="img/team_member.jpg" alt="team member">
 					</div>	
-					<div class="team-name">Damian Rodziewicz</div>
+					<div class="team-name">Damian</div>
 					<div class="position">Świadek</div>
-					<p>
+					<div class="member-info">
                     <a href="mailto:damian.rodziewicz@gmail.com">damian.rodziewicz@gmail.com</a>
-					</p>
+					</div>
 				</div>
 				<!-- end: About Member -->
 				
