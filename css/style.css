@@ -34,8 +34,8 @@
 }
 
 .color.white h2 span {
-	background: #fff !important;
 	color: #414141 !important;
+    background: white;
 }
 
 .color.white #page-title h2:before{
@@ -2682,4 +2682,11 @@ footer #social {
 
 #home {
     margin-top: -50px;
+}
+
+.color {
+	letter-spacing: 0.2px;
+    font-size: 120%;
+    line-height: 140%;
+    word-spacing:2px;
 }
