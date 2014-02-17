@@ -1,6 +1,6 @@
 #slider {
 	position: relative;
-	height: 95vh;
+	height: 100vh;
 }
 
 .demo-1 .sl-slider-wrapper {
@@ -54,7 +54,7 @@
 .nav-dots {
     right: 30px;
 	position: absolute;
-	top: 90%;
+	top: 95%;
 	height: 30px;
 	z-index: 1000;
 }
